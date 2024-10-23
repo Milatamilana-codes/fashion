@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-size: auto;
+}
+
+nav,
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  gap: 1.25rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  /* color: gray; */
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.hamburger-nav {
+  display: none;
+}
+
+.hamburger-icon {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.nav-links {
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  top: 15%;
+  background-color: gray;
+  overflow: hidden;
+  list-style: none;
+  left: 0;
+  right: 0;
+  max-height: 0;
+}
+
+.nav-links a {
+  margin: 20px;
+}
+
+.nav-links.open {
+  max-height: 800px;
+}
+
+.header {
+  padding-top: 5rem;
+  padding-inline: 1rem;
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+
+.header_container {
+  padding: 0;
+  max-width: calc(var(--max-width) - 2rem);
+  display: grid;
+  background-color: #f4f6f6;
+  border-radius: 2rem;
+}
+
+.header_content {
+  padding: 5rem 2rem;
+}
+
+.header_content h1 {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 5.5rem;
+  color: black;
+  text-align: center;
+}
+
+.header_content h1 span {
+  position: relative;
+  isolation: isolate;
+}
+
+.header_content h1 span::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -1rem;
+  height: 100%;
+  width: calc(100% + 4rem);
+  transform: rotate(-2deg);
+  z-index: -1;
+}
+
+.header_content h1 span:nth-child(3)::before {
+  background-color: #e5c641;
+  /* margin-top: 5rem; */
+}
+
+.header_content p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+}
+
+.header_btns {
+  text-align: center;
+}
+
+.header_image img {
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.header_content h1 span:nth-child(4)::before {
+  background-color: white;
+}
+
+.bannar {
+  padding-block: 1rem;
+  overflow: hidden;
+}
+
+.banner_container {
+  /* width: 100vh; */
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  margin-top: 3rem;
+  animation: scroll 5s linear infinite;
+  /* background-color: #e5c641; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* height: 120px; */
+}
+
+.bannar_container img {
+  align-items: center;
+}
+
+.new {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.one,
+.two {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+.two {
+  margin-top: 2rem;
+}
+
+.bhy {
+  justify-content: center;
+}
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 4rem));
+  }
+}
+
+@media (width > 540px) {
+  .header_content h1 {
+    font-size: 5rem;
+    line-height: 6.5rem;
+  }
+}
+@media (width > 768px) {
+  nav {
+    position: static;
+    max-width: max-width;
+    margin-inline: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  /* .nav_header{
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav_logo a{
+        font: size 1.75rem; 
+    }
+
+    .nav-links{
+        position: static;
+        padding: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: transparent;
+        transform: none;
+    }
+
+    .nav-links a {
+        color: black;
+    } */
+
+  /* .nav-links a:hover{
+        color: #e5c641;
+    } */
+
+  header {
+    padding: 0;
+  }
+
+  .header_container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    isolation: isolate;
+  }
+
+  .header_content :is(h1, p, .header_btns) {
+    text-align: left;
+  }
+
+  .header_image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .header_image img {
+    position: absolute;
+    width: unset;
+    height: 100%;
+    right: 1rem;
+    top: 2rem;
+    z-index: -1;
+  }
+
+  .bhy h1 {
+    text-align: center;
+  }
+
+  .mnb {
+    text-align: center;
+  }
+
+  .lol {
+    height: 10rem;
+    width: auto;
+  }
+}
+.noch {
+  display: flex;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+}
